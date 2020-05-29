@@ -32,6 +32,8 @@ gem 'autoprefixer-rails'
 gem 'font-awesome-sass', '~> 5.12.0'
 gem 'simple_form'
 
+gem 'cloudinary', '~> 1.12.0'
+
 # For security, this gem don't send to github archive with .gitignore
 gem 'dotenv-rails', groups: [:development, :test]
 
