@@ -1,14 +1,30 @@
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <%= link_to root_path, class: "navbar-brand" do %>
+    <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
+  <% end %>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li>
+        <%= link_to  "Create a new cocktail", new_cocktail_path, class: "btn btn-warning" %>
+      </li>
+    </ul>
+  </div>
+</div>
 <div class="container">
   <h1>Cocktails</h1>
-
-  <ul>
-    <% @cocktails.each do |cocktail| %>
-      <li>
+  <div class="row ">
+      <% @cocktails.each do |cocktail| %>
+      <div class="card-category col-3 mx-3" style="background: url(https://source.unsplash.com/1920x2800/?<%= cocktail.name %>)">
         <%= cocktail.name %>
         <%= link_to "See details", cocktail_path(cocktail.id) %>
-      </li>
-    <% end %>
-  </ul>
-
-  <%= link_to  "Create a new cocktail", new_cocktail_path %>
+      </div>
+      <% end %>
+    </div>
+  </div>
 </div>
