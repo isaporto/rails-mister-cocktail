@@ -20,6 +20,19 @@
   <h1>Cocktails</h1>
   <div class="row ">
       <% @cocktails.each do |cocktail| %>
+
+        <% if cocktail.photo %> 
+          <div class="card-category col-3 mx-3" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('<%= cl_image_path cocktail.photo.key, crop: :fill %>')">
+          <%= cocktail.name %>
+          <%= link_to "See details", cocktail_path(cocktail.id) %>
+          </div>
+        <% else %>
+          <div class="card-category col-3 mx-3" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('https://i.pinimg.com/564x/c5/f1/bc/c5f1bca2f250ddcc774135392ea52ad5.jpg')">
+          <%= cocktail.name %>
+          <%= link_to "See details", cocktail_path(cocktail.id) %>
+          </div>
+        <% end %>
+
       <div class="card-category col-3 mx-3" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('<%= cl_image_path cocktail.photo.key, crop: :fill %>')">
         <%= cocktail.name %>
         <%= link_to "See details", cocktail_path(cocktail.id) %>
