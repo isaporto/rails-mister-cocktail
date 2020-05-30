@@ -3,3 +3,9 @@
 
 const channels = require.context('.', true, /_channel\.js$/)
 channels.keys().forEach(channels)
+
+document.getElementById('search-form').addEventListener('submit', (event) => {
+  event.preventDefault();
+  debugger
+  event.currentTarget
+})

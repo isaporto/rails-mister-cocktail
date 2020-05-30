@@ -14,3 +14,12 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   position: relative;
 }
+.details {
+  font-size: 15px;
+  color: rgb(255, 128, 153);
+  transition: ease 0.5s;
+  &:hover {
+    color: rgb(250, 100, 130);
+    text-decoration: none;
+  }
+}
