@@ -1,3 +1,27 @@
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <div>
+  <%= link_to root_path, class: "navbar-brand" do %>
+    <%= image_tag "https://image.flaticon.com/icons/svg/2979/2979344.svg" %>
+  <% end %>
+  <p class="title">Mister cocktail</p>
+  </div>
+
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <%= simple_form_for :search, url: root_path, method: :get, :html=> { class: "search-form-control mr-5", id: "search-form" } do |f| %>
+      <input class="form-control string required" type="text" name="search[query]" id="search_query" placeholder="Search for a cocktail"/>
+      <%= link_to  "/#", type: "submit", class: "btn-search" do %>
+         <i class="fas fa-search"></i>
+      <% end %>
+    <% end %>
+    <ul class="navbar-nav mr-auto">
+      <li>
+        <%= link_to  "New cocktail", new_cocktail_path, class: "btn btn-warning btn-new" %>
+      </li>
+    </ul>
+  </div>
+</div>
+
 <div class="container">
   <h1><%= @cocktail.name %></h1>
   <table>

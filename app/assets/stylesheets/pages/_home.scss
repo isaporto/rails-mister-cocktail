@@ -1,5 +1,6 @@
 // Specific CSS for your home-page
 body {
-  background: linear-gradient(rgba(255, 205, 105, 0.8), rgba(255, 128, 153, 0.8)) no-repeat;
+  background: linear-gradient(rgba(255, 205, 105, 0.8), rgba(255, 128, 153, 0.8)) no-repeat fixed;
   background-size: cover;
+  height: 100vh;
 }

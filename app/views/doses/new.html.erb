@@ -1,7 +1,7 @@
 <div class="container my-5">
   <%= simple_form_for [@cocktail, @dose] do |f| %>
     <%= f.input :description %>
-    <%= f.association :ingredient %>
+    <%= f.association :ingredient, class: 'js-example-basic-single' %>
     <%= f.submit %>
   <% end %>
 </div>
